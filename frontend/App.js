@@ -1,21 +1,13 @@
-// src/navigation/AppNavigator.js
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import UserProfileScreen from "./src/screens/UserProfileScreen";
-import GoalSettingScreen from "./src/screens/GoalSettingScreen";
+import TabNavigator from "./src/navigator/TabNavigator"; // Update the import path
 
-const Stack = createStackNavigator();
-
-const AppNavigator = () => {
+const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="UserProfile">
-        <Stack.Screen name="UserProfile" component={UserProfileScreen} />
-        <Stack.Screen name="GoalSetting" component={GoalSettingScreen} />
-      </Stack.Navigator>
+      <TabNavigator/>
     </NavigationContainer>
   );
 };
 
-export default AppNavigator;
+export default App;
